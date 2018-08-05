@@ -1,0 +1,9 @@
+<aura:component >
+    <ltng:require styles="/resource/hljs/styles/solarized_light.css"
+                  scripts="/resource/hljs/highlight.pack.js"
+                  afterScriptsLoaded="{!c.afterScriptsLoaded}"
+    />
+    <pre><code class="html">
+        {!v.body}
+    </code></pre>
+</aura:component>

@@ -1,0 +1,199 @@
+{
+    "projects": [{
+        "_id": "slds-lightning-components-workshop",
+        "trail_ids": [],
+        "title": "Lightning Design System and Components - Workshop",
+        "description_html": "Lightning Design System Components - Workshop",
+        "icon_url": "https://res.cloudinary.com/hy4kyit2a/image/upload/v1412121009/2014-TH-Apex_Database_bxfvll.png",
+        "color": "#AABBCC",
+        "level": "beginner",
+        "success_html": "<b>Woo hoo!<\/b> You've completed the challenge!",
+        "badge_title": "Quick Start: DevZone App",
+        "steps": [{
+            "_id": "slds-lc-1",
+            "title": "Enable Lightning And Install the SLDS Framework",
+            "description_html": "Introduction, Enable Lightning and Install SLDS",
+            "icon_url": "https://res.cloudinary.com/hy4kyit2a/image/upload/v1410558351/badge_1_ieqvzv.png",
+            "color": "#AABBCC",
+            "level": "beginner",
+            "tags": [{
+                "name": "lightning",
+                "value": "Lightning"
+                },
+                {
+                "name": "ui",
+                "value": "User Interface"
+                }
+            ],
+            "roles": [
+                {
+                  "name": "dev",
+                  "value": "Developer"
+                }
+            ],
+            "products": [
+                {
+                  "name": "appcloud",
+                  "value": "App Cloud"
+                }
+            ],
+            "content_href": "sldsx_1.md",
+            "challenge-time": 10
+        }, 
+        {
+            "_id": "slds-lc-2",
+            "title": "Decompose The App Into Components",
+            "description_html": "Divide The App Into Components",
+            "icon_url": "https://res.cloudinary.com/hy4kyit2a/image/upload/v1410558351/badge_1_ieqvzv.png",
+            "color": "#AABBCC",
+            "level": "beginner",
+            "tags": [{
+                "name": "lightning",
+                "value": "Lightning"
+                },
+                {
+                "name": "ui",
+                "value": "User Interface"
+                }
+            ],
+            "roles": [
+                {
+                  "name": "dev",
+                  "value": "Developer"
+                }
+            ],
+            "products": [
+                {
+                  "name": "appcloud",
+                  "value": "App Cloud"
+                }
+            ],
+            "content_href": "sldsx_2.md",
+            "challenge-time": 5
+        }, 
+        {
+            "_id": "slds-lc-3",
+            "title": "Build the Lightning App",
+            "description_html": "Build Accounts App",
+            "icon_url": "https://res.cloudinary.com/hy4kyit2a/image/upload/v1410558351/badge_1_ieqvzv.png",
+            "color": "#AABBCC",
+            "level": "beginner",
+            "tags": [{
+                "name": "lightning",
+                "value": "Lightning"
+                },
+                {
+                "name": "ui",
+                "value": "User Interface"
+                }
+            ],
+            "roles": [
+                {
+                  "name": "dev",
+                  "value": "Developer"
+                }
+            ],
+            "products": [
+                {
+                  "name": "appcloud",
+                  "value": "App Cloud"
+                }
+            ],
+            "content_href": "sldsx_3.md",
+            "challenge-time": 5
+        }, 
+        {
+            "_id": "slds-lc-4",
+            "title": "Build A Basic SVG Icon Component",
+            "description_html": "Build A Basic SVG Icon Component",
+            "icon_url": "https://res.cloudinary.com/hy4kyit2a/image/upload/v1410558351/badge_1_ieqvzv.png",
+            "color": "#AABBCC",
+            "level": "beginner",
+            "tags": [{
+                "name": "lightning",
+                "value": "Lightning"
+                },
+                {
+                "name": "ui",
+                "value": "User Interface"
+                }
+            ],
+            "roles": [
+                {
+                  "name": "dev",
+                  "value": "Developer"
+                }
+            ],
+            "products": [
+                {
+                  "name": "appcloud",
+                  "value": "App Cloud"
+                }
+            ],
+            "content_href": "sldsx_4.md",
+            "challenge-time": 10
+        }, 
+        {
+            "_id": "slds-lc-5",
+            "title": "Build A Button Component",
+            "description_html": "Build A Button Component",
+            "icon_url": "https://res.cloudinary.com/hy4kyit2a/image/upload/v1410558351/badge_1_ieqvzv.png",
+            "color": "#AABBCC",
+            "level": "beginner",
+            "tags": [{
+                "name": "lightning",
+                "value": "Lightning"
+                },
+                {
+                "name": "ui",
+                "value": "User Interface"
+                }
+            ],
+            "roles": [
+                {
+                  "name": "dev",
+                  "value": "Developer"
+                }
+            ],
+            "products": [
+                {
+                  "name": "appcloud",
+                  "value": "App Cloud"
+                }
+            ],
+            "content_href": "sldsx_5.md",
+            "challenge-time": 10
+        }, 
+        {
+            "_id": "slds-lc-6",
+            "title": "Build The AccountList Component",
+            "description_html": "Build The Account List Component",
+            "icon_url": "https://res.cloudinary.com/hy4kyit2a/image/upload/v1410558351/badge_1_ieqvzv.png",
+            "color": "#AABBCC",
+            "level": "beginner",
+            "tags": [{
+                "name": "lightning",
+                "value": "Lightning"
+                },
+                {
+                "name": "ui",
+                "value": "User Interface"
+                }
+            ],
+            "roles": [
+                {
+                  "name": "dev",
+                  "value": "Developer"
+                }
+            ],
+            "products": [
+                {
+                  "name": "appcloud",
+                  "value": "App Cloud"
+                }
+            ],
+            "content_href": "sldsx_6.md",
+            "challenge-time": 10
+        }]
+    }]
+}

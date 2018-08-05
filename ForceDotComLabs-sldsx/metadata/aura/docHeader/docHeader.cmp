@@ -1,0 +1,12 @@
+<aura:component access="GLOBAL">
+    <aura:attribute name="name" type="String"/>
+    <aura:attribute name="top" type="Boolean" default="true"/>
+    <aura:attribute name="anchorName" type="String" default="true"/>
+   <a name="{!v.anchorName}"></a>     
+  <sldsx:grid >   
+    <sldsx:col size="10-of-12"><h1 class="slds-text-heading--large slds-truncate">{!v.name}</h1></sldsx:col>
+     <aura:if isTrue="{!v.top == true}"> 
+    	<sldsx:col size="2-of-12"><a onclick="{!c.scroll}" data-href="#top"><sldsx:label value="Scroll To Top"/></a></sldsx:col>
+    </aura:if>     
+  </sldsx:grid> 
+</aura:component>
