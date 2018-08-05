@@ -1,0 +1,17 @@
+/*
+
+!.gitignore
+!.gitignore.
+!.travis.yml
+
+/src/*
+
+!/src/
+!/src/classes/
+!/src/triggers/
+!/src/pages/
+!/src/components/
+!/src/aura/
+!/src/staticresources/
+!/src/package.xml
+

@@ -1,0 +1,10 @@
+<design:component label="Contacts Creator">
+	<design:attribute name="max" label="Maximum number of contacts" />
+    <design:attribute name="columns" label="Columns" />
+    <design:attribute name="message" label="Message" />
+    <design:attribute name="saveButton" label="Save Button" />
+    <design:attribute name="minified" label="Minified" />
+    <sfdc:objects>
+        <sfdc:object>Account</sfdc:object>
+    </sfdc:objects>
+</design:component>

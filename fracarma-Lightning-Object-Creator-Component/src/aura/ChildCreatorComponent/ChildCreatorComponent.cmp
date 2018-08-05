@@ -1,0 +1,83 @@
+<aura:component controller="ChildCreatorController" access="global">
+
+	<aura:attribute name="obj" type="Sobject" default="{
+															'sobjectType': 'Sobject',
+										                   'Id' : '',
+															}"  access="global"/>
+	<aura:attribute name="fieldList" type="Object[]"  access="global"/>
+	<!-- additionalFields format: "fieldName1:value1;fieldName2:value2..." -->
+	<aura:attribute name="additionalFields" type="String"  access="global"/>
+	
+	<aura:attribute name="saveButton" type="Boolean" default='{!true}' access="global"/>
+	<aura:attribute name="message" type="Boolean" default='{!false}'   access="global"/>
+	<aura:attribute name="max" type="Integer"  access="global"/>
+	<aura:attribute name="columns" type="Integer" default='1'  access="global" />
+	<aura:attribute name="createRecordOnLoad" type="Boolean" default='{!true}'  access="global" />
+	<aura:attribute name="loadExistingRecords" type="String" default='{!false}'  access="global" />
+	<aura:attribute name="minified" type="Boolean" default='{!false}' access="global"/>
+	
+	<!-- PRIVATE ATTRIBUTES -->
+
+	<aura:attribute name="fieldMap" type="Object" access="private" />
+	<aura:attribute name="objName" type="String" access="private"/>
+	<aura:attribute name="itemList" type="SObject[]" access="private" />
+
+	<!-- EVENTS -->
+	<aura:registerEvent name="validationErrorEvent" type="c:validationError"/>
+	<aura:registerEvent name="savedItemListEvent" type="c:savedItemList"/>
+	<aura:registerEvent name="returnItemListEvent" type="c:returnItemList"/>
+
+	<aura:handler name="changeFieldValue" event="c:changeFieldValue" action="{!c.handleChangeFieldValue}"/>
+	<aura:handler name="removeItemEvent" event="c:removeItem" action="{!c.handleRemoveItem}"/>
+	<aura:handler name="savedItemListEvent" event="c:savedItemList" action="{!c.handleSavedItemList}"/>
+	
+	<!-- Fracarma: The spinner I prefer to show it only on "real" server calls...
+	<aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+	<aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/> -->
+
+
+
+	<!-- METHODS -->
+
+	<aura:method name="save" action="{!c.externalSaveItemList}" 
+      description="Save the method"> 
+        <aura:attribute name="fieldList" type="Object" /> 
+    </aura:method>
+	
+	<aura:method name="fireReturnItemListEvent" action="{!c.fireReturnItemListEvent}" description="Fire the return item list event"/> 
+	<aura:method name="validateFields" action="{!c.validateFields}" description="Validate fields based on the component requirements"/> 
+	<!-- INIT -->
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    
+    <!-- BODY -->
+    <div class="slds-grid slds-wrap ">
+    	
+		<aura:if isTrue="{!v.message}">
+			<div class="slds-p-horizontal--small slds-size--1-of-1">
+				<ui:message aura:id="messages" />
+			</div>
+		</aura:if>
+
+		<aura:iteration items="{!v.itemList}" var="item">
+			<div class="{!'slds-p-around--x-small slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-'+v.columns}">
+				<c:ChildCreatorItem item="{!item}" fieldList="{!v.fieldList}" fieldMap="{!v.fieldMap}" objName="{!v.objName}" minified="{!v.minified}"/>
+			</div>
+
+		</aura:iteration>
+	</div>
+    
+    <ui:button label="{! 'Add ' + v.objName}"
+              class="slds-button"
+              press="{!c.addItem}"
+              disabled="{!v.itemList.length >= v.max}"
+              />
+
+    <aura:if isTrue="{!v.saveButton}">
+		<ui:button label="Save"
+	              class="slds-button"
+	              press="{!c.saveItemList}"
+	              aura:id="saveButton"
+	              />
+    </aura:if>
+    <ui:spinner aura:id="spinner"/>
+</aura:component>

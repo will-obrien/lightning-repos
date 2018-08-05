@@ -1,0 +1,321 @@
+// stylelint-disable selector-class-pattern
+// CodeView
+.docs-codeblock {
+  margin-bottom: 2rem;
+}
+
+.docs-codeblock-example,
+.docs-codeblock-source {
+  border: solid 3px #f2f2f2;
+  padding: 1rem;
+  position: relative;
+}
+
+.docs-codeblock-example {
+  overflow: auto;
+  transform: translate3d(0, 0, 0);
+}
+
+.docs-codeblock-source {
+  margin-bottom: 1.5rem;
+}
+
+.docs-codeblock-source.code-collapsed,
+.docs-codeblock-source.code-expanded {
+  padding-top: 2rem;
+}
+
+.docs-codeblock-example + .docs-codeblock-source {
+  border-top: 0;
+}
+
+.docs-codeblock-source.code-collapsed:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1));
+  display: block;
+  height: 4rem;
+}
+
+.docs-codeblock-source.code-collapsed pre {
+  height: (21px * 5); // Line-height * lines to show
+  overflow: hidden;
+}
+
+.docs-codeblock-source.code-expanded pre {
+  height: auto;
+}
+
+.docs-codeblock__action-bar {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  z-index: 1;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  background: #fff;
+}
+
+.docs-codeblock__action-bar li {
+  padding: 0 0.5rem;
+
+  + li {
+    border-right: 1px solid #f2f2f2;
+  }
+}
+
+.doc-toggle-code__button {
+  font-weight: 700;
+}
+
+// Type Styles
+// Type scale — http://www.modularscale.com/?1&em&1.2
+.doc {
+  color: #5876a3;
+  font-size: 1rem;
+}
+
+h1.doc,
+h2.doc,
+h3.doc,
+h4.doc,
+h5.doc,
+h6.doc {
+  color: #16325c;
+
+  a.doc-anchor {
+    color: #706e6b;
+    font-size: inherit;
+    margin-left: 0.5rem;
+  }
+}
+
+h1.doc {
+  font-size: 2.488rem;
+  margin-bottom: 2rem;
+}
+
+h2.doc {
+  font-size: 2.074rem;
+  margin: 4rem 0 1rem;
+}
+
+h3.doc {
+  font-size: 1.728rem;
+  margin: 2rem 0 1rem;
+}
+
+h4.doc {
+  font-size: 1.44rem;
+  margin: 2rem 0 1rem;
+}
+
+h5.doc {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+h6.doc {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+p.doc {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p.doc:first-child {
+  margin-top: 0;
+}
+
+a.doc {
+  color: #0070d2;
+}
+
+.lead {
+  font-size: 1.44rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+blockquote.doc {
+  background-color: #fafaf9;
+  font-size: 1.125rem;
+  font-weight: 300;
+  padding: 1rem;
+  margin: 0 0 1.5rem 0;
+  border: 1px solid #f2f2f2;
+  border-left-width: 0.125rem;
+
+  .doc {
+    color: #3e3e3c;
+  }
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  .lead {
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+}
+
+blockquote.doc p:only-child,
+blockquote.doc p:first-child {
+  margin-top: 0;
+}
+
+blockquote.doc p:only-child,
+blockquote.doc p:last-child {
+  margin-bottom: 0;
+}
+
+// this is the default blockquote color
+.site-blockquote_note.doc {
+  border-left-color: #00396b;
+
+  .lead {
+    color: #00396b;
+  }
+}
+
+.site-blockquote_a11y.doc {
+  border-left-color: #0070d2;
+
+  .lead {
+    color: #0070d2;
+  }
+}
+
+.site-blockquote_warning.doc {
+  border-left-color: #ffb75d;
+
+  // the following text color is different to meet the a11y ratio
+  .lead {
+    color: #d47500;
+  }
+}
+
+ul.doc,
+ol.doc {
+  margin: 0 0 1.5rem 3rem;
+}
+
+ul.doc {
+  list-style: disc;
+}
+
+ol.doc {
+  list-style: decimal;
+}
+
+table.doc {
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  margin-bottom: 1.5rem;
+}
+
+td.doc,
+th.doc {
+  padding: 0.5rem;
+}
+
+thead.doc th.doc,
+thead.doc td.doc {
+  padding: 0.5rem;
+}
+
+tr.doc td.doc,
+tr.doc th.doc {
+  border-top: 1px solid #f2f2f2;
+}
+
+tr.doc td:not(:first-child),
+tr.doc th:not(:first-child) {
+  border-left: 1px solid #f2f2f2;
+}
+
+code.doc {
+  background: #f6f9fb;
+  color: #1990b8;
+  padding: 0 2px;
+  border-radius: 0.125rem;
+}
+
+ul.doc-toc {
+  margin-left: 0;
+  list-style: none;
+}
+
+.doc-toc li.doc a {
+  font-size: .875rem;
+  font-weight: 700;
+}
+
+li.doc > ul.doc, li.doc > li.doc, ul.doc > ul.doc, ul.doc > li.doc {
+  margin-left: .4rem;
+}
+
+li.doc > ul.doc {
+  margin-bottom: 0;
+}
+
+.doc-toc > li.doc > ul.doc > li.doc a {
+  font-weight: 400;
+}
+
+.doc-toc > li.doc > ul.doc ul.doc > li.doc a {
+  font-size: .75rem;
+  font-weight: 400;
+  color: #4872ab;
+}
+
+h2.doc-toc-header {
+  font-size: 1rem;
+  border-bottom: 1px solid #d9dbdd;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.doc-tokens-group .slds-button {
+  margin: 1rem 0;
+}
+
+.doc-token {
+  display: inline-flex;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.doc-token__image {
+  width: 4rem;
+  height: 4rem;
+  background:
+    linear-gradient(45deg, rgba(43, 40, 38, 0.1) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(43, 40, 38, 0.1) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(43, 40, 38, 0.1) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(43, 40, 38, 0.1) 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+  border: 1px solid #dddbda;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.doc-token__image > div {
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(43, 40, 38, 0.1) 0 0 0 1px inset;
+  border-radius: 4px;
+}

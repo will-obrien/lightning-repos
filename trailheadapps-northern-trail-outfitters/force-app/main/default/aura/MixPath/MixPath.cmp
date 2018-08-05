@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" >
+
+    <aura:attribute name="variant" type="String" default="non-linear"/>
+    <aura:attribute name="hideUpdateButton" type="Boolean" default="true"/>
+    <aura:attribute name="record" type="Object" />
+
+    <force:recordData aura:id="mixRecord"
+                      recordId="{!v.recordId}"
+                      targetFields="{!v.record}"
+					  fields="['Id', 'Status__c']"
+                      mode="EDIT"
+                      recordUpdated="{!c.onRecordUpdated}" />
+
+    <c:Subscriber channel="/topic/MixStatusChange" onMessage="{!c.messageHandler}"/>
+
+    <lightning:path aura:id="path" recordId="{!v.recordId}"
+        variant="{!v.variant}"
+        hideUpdateButton="{!v.hideUpdateButton}"
+        onselect="{!c.onStepChange}"
+    />
+
+</aura:component>

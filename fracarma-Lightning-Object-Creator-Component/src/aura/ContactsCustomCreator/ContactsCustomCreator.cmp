@@ -1,0 +1,45 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName" access="global">
+
+	<aura:attribute name="max" type="Integer" />
+	<aura:attribute name="columns" type="Integer" default='1'  />
+	<aura:attribute name="saveButton" type="Boolean" />
+	<aura:attribute name="message" type="Boolean" />
+	<aura:attribute name="minified" type="Boolean" />
+
+
+	 <c:ChildCreatorComponent obj="{
+                            			sobjectType : 'Contact',
+		                            	LastName : 'Rossi',
+		                            	FirstName : 'Mario'
+                    				}"
+    
+                    			additionalFields="{!'AccountId:'+v.recordId}"
+							
+                              	fieldList="[
+                    				{name : 'FirstName' ,       type : 'inputField', required : true},
+	                            	{name : 'LastName' ,       type : 'inputField', required : true},
+	                            	{name : 'CleanStatus' ,    type : 'outputField'},
+	                            	{name : 'DoNotCall' ,    type : 'inputField'},
+	                            	{name : 'HasOptedOutOfEmail' ,    type : 'inputField'},
+	                            	{name : 'Test_Currency__c' ,    type : 'inputField'},
+	                            	{name : 'Test_Number__c' ,    type : 'inputField'},
+	                            	{name : 'Phone' ,        type : 'inputField', 
+	                            		disabled: {condition: ['AND',{field: 'LastName', value: 'Rossi'},{field: 'FirstName', value: 'Mario'}], 
+	                            		resetOnDisabled : true}
+	                            	},
+	                            	{name : 'Email' ,        type : 'inputField'}
+	                        	]"
+            					
+            					loadExistingRecords="{!'AccountId:'+v.recordId}"
+
+								max="{!v.max}"
+								columns="{!v.columns}"
+								saveButton="{!v.saveButton}"
+								message="{!v.message}"
+								createRecordOnLoad="{!true}"
+								minified="{!v.minified}"
+
+
+
+			                        />
+	</aura:component>

@@ -1,0 +1,50 @@
+<aura:component >
+
+	<aura:registerEvent name="removeItemEvent" type="c:removeItem"/>
+
+	<aura:attribute name="item" type="SObject" required="true"/>
+	<aura:attribute name="fieldList" type="Object[]" />
+
+	<aura:attribute name="fieldMap" type="Object" />
+	<aura:attribute name="objName" type="String" />
+	<aura:attribute name="minified" type="Boolean" />
+
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+	<aura:handler name="changeFieldValue" event="c:changeFieldValue" action="{!c.handleChangeFieldValue}"/>
+
+	<div class= "{!'slds-box slds-box--small ' + (v.item.obj.Id != null ? 'slds-theme--standard' : 'slds-theme--shade')}">
+		<!-- NOT MINIFIED -->
+		<aura:if isTrue="{!!v.minified}">
+			<div class="slds-media">
+		    	<div class="slds-media__figure">
+		    		<span class="slds-avatar slds-avatar--large">
+						<img src="{!$Resource.SLDS212 + (v.item.obj.Id != null ? '/assets/images/avatar1.jpg' : '/assets/images/avatar2.jpg')}" alt="" style="{!v.item.toBeRemoved ? 'opacity : 0.5' : ''}"/>
+		    		</span>
+		    	</div>
+		    	<div class="slds-media__body">
+		    		<p class="slds-text-heading--label">{!v.objName}</p>
+		    		<h1 class="slds-text-heading--medium">{!v.objName + ' ' + (v.item.index + 1) + (v.item.obj.Id == null ? ' - New' : '')}</h1>
+		    	</div>
+		    	<ui:button label="{!(v.item.toBeRemoved ? 'Restore' : 'Remove') + ' ' + v.objName}"
+		              class="slds-button"
+		              press="{!(v.item.toBeRemoved ? c.restoreItemAction : c.removeItemAction)}" />
+		
+			</div>
+			<form class="slds-form--horizontal" aura:id="placeholder"></form>
+		</aura:if>
+
+		<!-- MINIFIED -->
+		<aura:if isTrue="{!v.minified}">
+			<form class="slds-form--inline">
+				<span  aura:id="placeholder"></span>
+				  <div class="slds-form-element slds-p-horizontal--medium slds-p-bottom--small">
+					  <ui:button label="{!(v.item.toBeRemoved ? 'Restore' : 'Remove') + ' ' + v.objName}"
+                                 class="{!'slds-button '+ (v.item.toBeRemoved ? '' : 'slds-button--destructive')}"
+                                 press="{!(v.item.toBeRemoved ? c.restoreItemAction : c.removeItemAction)}" />
+	  			</div>
+			</form>
+		</aura:if>
+
+
+	</div>
+</aura:component>
