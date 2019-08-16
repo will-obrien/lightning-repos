@@ -1,5 +1,5 @@
 public class Foo{
 
-  private void bad(){}
-
+  private void bad(String param){}
+    param = 'bad';
 }
