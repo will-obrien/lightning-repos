@@ -6,4 +6,7 @@ public class Foo{
   
   private void empty(){}
 
+  private void empty2(){}
+  private void empty3(){}
+  private void empty4(){}
 }
