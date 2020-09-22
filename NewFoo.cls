@@ -26,4 +26,6 @@ public class Foo{
 
         return r;
     }
+  
+  //Comments for trigger
 }
