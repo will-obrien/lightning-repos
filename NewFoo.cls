@@ -1,5 +1,5 @@
 public class Foo{
-
+  //Blah
   private void bad(Integer param){
     param = 4;
   }
