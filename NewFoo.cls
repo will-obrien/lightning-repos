@@ -1,10 +1,5 @@
 public class Foo{
-  //Blah
-  private void bad(Integer param){
-    param = 4;
-  }
   
-  private void empty(){}
 
       @AuraEnabled
     public static PagedResult findAll(String searchKey, Decimal minAlcohol, Decimal pageNumber) {
@@ -27,6 +22,5 @@ public class Foo{
         return r;
     }
   
-  //Comments for trigger
-  //Comment
+
 }
