@@ -3,7 +3,7 @@ public class Foo{
 
       @AuraEnabled
     public static PagedResult findAll(String searchKey, Decimal minAlcohol, Decimal pageNumber) {
-        Integer pageSize = 12;
+        Integer pageSize = 22;
         String key = '%' + searchKey + '%';
         Integer offset = ((Integer)pageNumber - 1) * pageSize;
         
