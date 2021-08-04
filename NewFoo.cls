@@ -2,7 +2,7 @@ public class Foo{
 
   private void bad(Integer param){
     param = 4;
-    //Comment 2
+    //Comment 244534
   }
   
   private void empty(){}
