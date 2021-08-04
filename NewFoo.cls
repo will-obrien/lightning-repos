@@ -1,4 +1,4 @@
-//Will O'Brien *********4353
+//Will O'Brien *
 //Another comment
 public class Foo{
   
