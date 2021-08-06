@@ -10,3 +10,4 @@ public class Foo{
   private void empty3(){}
   private void empty4(){}
 }
+//***
