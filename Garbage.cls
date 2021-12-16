@@ -43,4 +43,8 @@ public class SQLInjectionFalsePos {
 
         return Database.query(query);
     } 
+    
+    public void bad(String param){
+        param = 'Will'
+    }
 }
