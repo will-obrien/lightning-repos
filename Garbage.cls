@@ -45,6 +45,6 @@ public class SQLInjectionFalsePos {
     } 
     
     public void bad(String param){
-        param = 'Will'
+        param = 'Will';
     }
 }
