@@ -124,5 +124,9 @@ public with sharing class ChildCreatorController {
 		public String type;
 		public Boolean required;
 	}
+	
+	public void willIsTerribleAtCode(Integer param){
+		param = 4;
+	}
 
 }
