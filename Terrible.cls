@@ -12,10 +12,6 @@ public class Terrible{
         return displayPopup;
     } 
     set;}
-	
-  public void badIdea(String param){
-  	 param = 'Hello World';
-  }
 
 
     public void execute(Database.BatchableContext BC, List<Financial_Reporting__c> scope)
@@ -430,7 +426,6 @@ public class Terrible{
             }
         }
         return url;     
-
     } 
     //END:: 08/06/2017 New Lightning UI Added by Ranjeet
     
