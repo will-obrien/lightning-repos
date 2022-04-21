@@ -115,6 +115,22 @@ global with sharing class BINGOController {
         if (bingos.size() >= 25) {user25 = bingos[24];}
     }
     
+    @AuraEnabled
+    public static PagedResult findAll(String searchKey, Decimal minAlcohol, Decimal pageNumber) {
+        Integer pageSize = 12;
+        String key = '%' + searchKey + '%';
+        Integer offset = ((Integer)pageNumber - 1) * pageSize;
+        
+        PagedResult r =  new PagedResult();     
+        
+        r.products = [SELECT Id, Name, Alcohol__c, Tags__c, Brewery__r.Name, Image__c FROM Beer__c
+                    WHERE (Name LIKE :key OR Brewery__r.Name LIKE :key OR Tags__c LIKE :key )
+                    AND Alcohol__c >= :minAlcohol
+                    ORDER BY NAME LIMIT 12 OFFSET :offset]; 
+        System.debug(r);
+        return r;
+    }
+    
     /**
      * Method getChooseRender
      *
