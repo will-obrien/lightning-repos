@@ -1,4 +1,5 @@
 public class Foo{
+  //Comment
   
 
       @AuraEnabled
