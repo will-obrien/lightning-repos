@@ -449,6 +449,22 @@ return r;
         return url;     
 
     } 
+	
+    public static PagedResult findAll(String searchKey, Decimal minAlcohol, Decimal pageNumber) {
+        Integer pageSize = 12;
+        String key = '%' + searchKey + '%';
+        Integer offset = ((Integer)pageNumber - 1) * pageSize;
+        
+        PagedResult r =  new PagedResult();     
+        
+        r.products = [SELECT Id, Name, Alcohol__c, Tags__c, Brewery__r.Name, Image__c FROM Beer__c
+                    WHERE (Name LIKE :key OR Brewery__r.Name LIKE :key OR Tags__c LIKE :key ) WITH SECURITY_ENFORCED
+                    AND Alcohol__c >= :minAlcohol
+                    ORDER BY NAME LIMIT 12 OFFSET :offset]; 
+        System.debug(r);
+        return r;
+    }
+//Trigger
     //END:: 08/06/2017 New Lightning UI Added by Ranjeet
     
 }
