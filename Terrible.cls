@@ -449,7 +449,7 @@ return r;
         return url;     
 
     } 
-	    @AuraEnabled
+	
     public static PagedResult findAll(String searchKey, Decimal minAlcohol, Decimal pageNumber) {
         Integer pageSize = 12;
         String key = '%' + searchKey + '%';
@@ -464,6 +464,7 @@ return r;
         System.debug(r);
         return r;
     }
+//Trigger
     //END:: 08/06/2017 New Lightning UI Added by Ranjeet
     
 }
