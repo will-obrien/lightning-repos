@@ -355,4 +355,8 @@ global with sharing class BINGOController {
     private void garbageMethod(Integer param){
       param=2;
     }
+    
+    private void garbageMethod2(Integer param){
+      param=2;
+    }
 }
