@@ -11,4 +11,8 @@ class Car{
   public void badParam(Integer param){
     param=5;
   }
+  
+    public void badParam2(Integer param){
+    param=5;
+  }
 }
