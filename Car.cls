@@ -7,4 +7,8 @@ class Car{
     Car c = (Car)JSON.deserializeStrict(
       '{"make":"'+ z + '","year":"' + x + '"}', Car.class);   //Bad: Unknown inputs are used to create the object.
   }
+  
+  public void badParam(Integer param){
+    param=5;
+  }
 }
