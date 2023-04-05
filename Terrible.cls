@@ -449,6 +449,10 @@ return r;
         return url;     
 
     } 
+	
+    public void newMethods(Integer param){
+      param=5;
+    }
     //END:: 08/06/2017 New Lightning UI Added by Ranjeet
     
 }
