@@ -453,6 +453,10 @@ return r;
     public void newMethods(Integer param){
       param=5;
     }
+    
+    public void newMethods2(Integer param){
+      param=5;
+    }
     //END:: 08/06/2017 New Lightning UI Added by Ranjeet
     
 }
