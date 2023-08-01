@@ -21,6 +21,10 @@ public class Foo{
 
         return r;
     }
+
+    public void badIdea(Integer param){
+        param =5;
+    }
   
 
 }
