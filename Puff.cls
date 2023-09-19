@@ -4,7 +4,6 @@
 //Puff.cls based on Mark Adler's puff.c
 //
 public class Puff {
-    private final Integer MAXBITS = 15;             /* maximum bits in a code */
     private final Integer MAXLCODES = 286;           /* maximum number of literal/length codes */
     private final Integer MAXDCODES = 30;            /* maximum number of distance codes */
     private final Integer MAXCODES = (MAXLCODES+MAXDCODES);  /* maximum codes lengths to read */
