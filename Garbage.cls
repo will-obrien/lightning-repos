@@ -1,4 +1,5 @@
 public class SQLInjectionFalsePos {
+//trigger
 
     public static List <Contact> getContacts(String name,String city, String country, string org, string orgId) {   
         string nameFilter;
