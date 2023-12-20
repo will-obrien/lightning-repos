@@ -1,4 +1,4 @@
-
+//Comment to trigger
 //Hello world
 public class Terrible{
 	public Employee_Detail__c empDetail		{get;set;}
