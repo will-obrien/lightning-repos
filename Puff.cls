@@ -2,7 +2,7 @@
 //Copyright (c) 2015 Pedro Dal Col, Pliny Smith
 //
 //Puff.cls based on Mark Adler's puff.c
-//
+// Kicking off analysis
 public class Puff {
     private final Integer MAXLCODES = 286;           /* maximum number of literal/length codes */
     private final Integer MAXDCODES = 30;            /* maximum number of distance codes */
