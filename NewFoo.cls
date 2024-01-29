@@ -6,7 +6,7 @@ public class Foo{
         Integer pageSize = 22;
         String key = '%' + searchKey + '%';
         Integer offset = ((Integer)pageNumber - 1) * pageSize;
-        
+        //comment
         PagedResult r =  new PagedResult();
         r.pageSize = pageSize;  
         r.page = (Integer) pageNumber;
@@ -20,6 +20,10 @@ public class Foo{
         System.debug(r);
 
         return r;
+    }
+
+    public void badIdea(Integer param){
+        param =5;
     }
   
 
