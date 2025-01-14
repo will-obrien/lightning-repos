@@ -3,7 +3,7 @@
 
 <apex:includeScript value="{!$Resource.jquery191}" />
 <apex:includeScript value="{!$Resource.CTIScreenPopJS}"/>
-<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+<apex:includeScript value="https://cdn.polyfill.io/v3/polyfill.min.js" />
 <script>
 var selectedTab = 'SearchTab';
 var j$ = jQuery.noConflict();
