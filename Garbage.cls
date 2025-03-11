@@ -48,4 +48,8 @@ public class SQLInjectionFalsePos {
     public void bad(String param){
         param = 'Will';
     }
+
+    public void bad2(Integer param){
+        param = 3;
+    }
 }
